@@ -1,20 +1,29 @@
 import java.util.Scanner;
 
 public class exam2 {
-    public static void main(String[] args){
+    public static void main(String[] args) {
 
+        boolean scope = true;
 
-    int num =1;
-    //6과 14의 최소공배수를 구하는 방법.
-    while(true){
-        if (num%6==0 && num%14==0) {
-            break;
+        if (scope) {
+            int num = 1;
+            num++;
+            System.out.println(num);
+
+        } else {
+            int num = 2;
+            System.out.println(num);
         }
-        num++;
+
+        simple();
     }
 
-    System.out.print(num);
+    public static void simple()
+        {
+            int num=3;
+            System.out.println(num);
+        }
 
     }
 
-}
+
