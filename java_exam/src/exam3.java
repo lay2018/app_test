@@ -2,60 +2,43 @@ import java.util.Scanner;
 
 public class exam3 {
 
-
     public static void main(String[] args){
-        int num;
 
-        System.out.print("숫자를 입력하세요.>");
+        Car myCar = new Car();
 
-        Scanner sc = new Scanner(System.in);
-        num = sc.nextInt();
+//        String myCarColor = myCar.color;
+        System.out.println(myCar.name+" "+myCar.color);
+        System.out.println("시작위치: "+myCar.x_pos);
+        myCar.goForward(10);
+        System.out.println("현재위치: "+myCar.x_pos);
+        System.out.println("현재 소유중인 차가"+myCar.name+"군요. 바꿔보죠. 동의하세요?(Yes or No)");
 
-//        System.out.print(add(num)+" ");
-        add(num);
+        Scanner scan = new Scanner(System.in);
+        String ans = scan.nextLine();
 
-//        int temp = 0;
-//        int sum = 0;
-//        while(temp < 10) {
-//            sum = add3(num, sum);
-//            System.out.print(sum+" ");
-//            temp++;
-        }
-
-    }
-
-    public static void add(int num) {
-        int temp = 0;
-        int result = 0;
-
-        while (temp < 10) {
-            temp++;
-            result = num * temp;
-            System.out.print(result + " ");
+        if(ans=="Yes") {
+            System.out.println("욕심을 부리셨군요. 바꿔드리죠.");
+//            myCar.getCarName("spark");
+            System.out.println("현재 소유중인 차를"+myCar.name+"로 바꿔드렸습니다.");
 
         }
-//        return result;
-    }
 
-    public static int add2(int num) {
-        int result = 0;
+        System.out.println("현재 소유중인 차를 그대로 유지합니다.");
 
-        for (int i=0; i<10; i++) {
-            result = num * i;
-            System.out.print(result + " ");
-        }
-
-
-        return result;
-    }
-
-    public static int add3(int num, int sum){
-        int result = 0;
-
-        result = num + sum;
-
-        return result;
 
     }
-
 }
+
+
+
+
+
+
+//    class FruitBuyer
+//    {
+//        int myMoney=5000;
+//        int numofApple=0;
+//
+//        public void buyApple(FruitSeller seller, int money)
+//    }
+
