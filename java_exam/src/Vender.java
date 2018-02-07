@@ -13,12 +13,12 @@ class Vender {
     int cocoa = 200;
 
     public void runVender() {
-        myVender.inputMoney(); //돈입력
-        myVender.selectTea(); //커피 선택
-        myVender.makeTea(myVender.tea); //커피 만들기 변수를 가져다가 사용.
-        int return_money = myVender.retrunMoney(myVender.tea,myVender.user_money); //잔돈 계산하기.
+        inputMoney(); //돈입력
+        selectTea(); //커피 선택
+        makeTea(tea); //커피 만들기 변수를 가져다가 사용.
+        int return_money = retrunMoney(tea,user_money); //잔돈 계산하기.
 
-        System.out.println("")
+        System.out.println("");
         System.out.println("거스름 돈은 "+return_money+"원 입니다."); //리턴머니에 잔돈을 저장한 후에 출력.
     }
 
