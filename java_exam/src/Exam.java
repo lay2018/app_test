@@ -3,11 +3,11 @@ import java.util.Scanner;
 public class Exam {
     public static void main(String[] args){
 
-        Vender myVender = new Vender();
-        Vender myVender2 = new Vender();
+        Person p1 = new Person(1234,5678);
+        Person p2 = new Person(4321);
 
-        myVender.runVender();
-
+        p1.showInfo();
+        p2.showInfo();
     }
 }
 
