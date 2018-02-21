@@ -1,35 +1,63 @@
+import java.util.Random;
 import java.util.Scanner;
 
 public class Exam {
     public static void main(String[] args){
-//        Coffee coffee1 = new Coffee ( true, false);
-//        Coffee coffee2 = new Coffee ( true );
-//
-//        System.out.println("첫 번째 오더");
-//        System.out.println("===================");
-//        coffee1.showMenu();
-//        System.out.println("===================");
-//
-//        System.out.println("두 번째 오더");
-//        System.out.println("===================");
-//        coffee2.showMenu();
-//        System.out.println("===================");
 
-        int[] arr = new int[3];
-        arr[0] = 1;
-        arr[1] = 2;
-        arr[2] = 3;
+        int num1;
+        System.out.println("가위바위보를 합시다.");
+        System.out.println("==================");
+        System.out.println("(1) 가위");
+        System.out.println("(2) 바위");
+        System.out.println("(3) 보");
+        System.out.println("==================");
+        System.out.print("하나를 선택해주세요.>");
 
 
+        Scanner scan = new Scanner(System.in);
+        num1 = scan.nextInt();
 
-        int num1 = 1;
-        int num2 = 2;
-        int num3 = 3;
+        if (num1 == 1){
+            System.out.println("당신은 가위를 냈습니다.");
+        } else if(num1 == 2) {
+            System.out.println("당신은 바위를 냈습니다.");
+        } else if(num1 == 3) {
+            System.out.println("당신은 보를 냈습니다.");
+        } else {
+            System.out.println("아무것도 내지 않았습니다.");
+        }
 
-        int sum = arr[0] + arr[1] + arr[2];
-        System.out.println(sum);
+        pcChoice(num1);
 
-    }
-}
+
+        }
+
+        public static void pcChoice(int num1) {
+
+            Random random = new Random();
+            int pcrand = random.nextInt(3);
+            switch (pcrand) {
+                case 0:
+                    System.out.println("컴퓨터는 가위를 냈습니다.");
+                    break;
+                case 1:
+                    System.out.println("컴퓨터는 바위를 냈습니다.");
+                    break;
+                case 2:
+                    System.out.println("컴퓨터는 보를 냈습니다.");
+                    break;
+            }
+
+            if ((num1-pcrand)==1){
+                System.out.println("비겼습니다.");
+            } else if ((num1-pcrand)==-1 || (num1-pcrand)==2) {
+                System.out.println("이겼습니다.");
+            } else {
+                System.out.println("졌습니다.");
+            }
+
+
+        }}
+
 
 
